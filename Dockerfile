@@ -1,5 +1,7 @@
 FROM alpine:3.12.0
 
+[![Build Status](https://drone.dotya.ml/api/badges/wanderer/docker-alpine-rsync/status.svg)](https://drone.dotya.ml/wanderer/docker-alpine-rsync)
+
 ARG BUILD_DATE
 ARG VCS_REF
 
