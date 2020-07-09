@@ -11,5 +11,5 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.license=GPL-3.0
 
 RUN apk update && apk -U upgrade --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing
-RUN apk add --no-cache ca-certificates rsync openssh-client --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
+RUN apk add --no-cache ca-certificates rsync openssh-client sshpass --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
   rm -rf /var/cache/apk/*
