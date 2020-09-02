@@ -1,4 +1,4 @@
-# docker-alpine-rf
+# docker-alpine-rsync
 
 [![Build Status](https://drone.dotya.ml/api/badges/wanderer/docker-alpine-rsync/status.svg)](https://drone.dotya.ml/wanderer/docker-alpine-rsync)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/immawanderer/alpine-rf)](https://hub.docker.com/r/immawanderer/alpine-rsync/builds)
