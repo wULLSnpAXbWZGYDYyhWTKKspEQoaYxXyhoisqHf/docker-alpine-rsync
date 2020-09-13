@@ -1,5 +1,6 @@
 ---
 kind: pipeline
+type: docker
 name: dockerhub-build-trigger
 
 platform:
@@ -13,12 +14,10 @@ trigger:
   branch:
     - master
   event:
-    - push
-    - tag
-    - cron
-  target:
-    exclude:
-    - nightly
+  - push
+  - cron
+  cron:
+   - hourly-build
 
 steps:
 - name: call webhook
@@ -35,6 +34,7 @@ steps:
 
 ---
 kind: pipeline
+type: docker
 name: dockerhub-build-trigger-nightly
 
 platform:
@@ -46,9 +46,9 @@ clone:
 
 trigger:
   event:
-    - cron
+  - cron
   cron:
-    - nightly
+  - nightly
 
 steps:
 - name: call webhook
@@ -65,6 +65,7 @@ steps:
 
 ---
 kind: pipeline
+type: docker
 name: notifications
 
 platform:
@@ -79,7 +80,6 @@ trigger:
     - master
   event:
     - push
-    - tag
   status:
     - success
     - failure
@@ -111,6 +111,7 @@ steps:
 
 ---
 kind: pipeline
+type: docker
 name: notifications-cronbuild
 
 platform:
@@ -124,7 +125,6 @@ trigger:
   event:
     - cron
   cron:
-    - hourly
     - hourly-build
   status:
     - success
@@ -156,6 +156,7 @@ steps:
 
 ---
 kind: pipeline
+type: docker
 name: notifications-cronbuild-nightly
 
 platform:
