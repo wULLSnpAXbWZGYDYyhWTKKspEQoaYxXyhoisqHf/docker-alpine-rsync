@@ -10,13 +10,6 @@ platform:
 clone:
   disable: true
 
-trigger:
-  branch:
-    - master
-  event:
-  - push
-  - cron
-
 steps:
 - name: call webhook
   pull: always
@@ -29,6 +22,8 @@ steps:
     - curl -sO https://git.dotya.ml/${DRONE_REPO}/raw/branch/master/curl.it
     - bash ./curl.it $ENDPOINT
   when:
+    branch:
+    - master
     event:
     - push
     - cron
@@ -49,12 +44,6 @@ platform:
 clone:
   disable: true
 
-trigger:
-  event:
-  - cron
-  cron:
-  - nightly
-
 steps:
 - name: call webhook
   pull: always
@@ -66,6 +55,13 @@ steps:
     - apk add --no-cache curl
     - curl -sO https://git.dotya.ml/${DRONE_REPO}/raw/branch/master/curl.it
     - bash ./curl.it -n $ENDPOINT
+  when:
+    branch:
+    - master
+    event:
+    - cron
+    cron:
+      - nightly
 
 
 ---
