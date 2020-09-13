@@ -16,8 +16,9 @@ trigger:
   event:
   - push
   - cron
-  cron:
-   - hourly-build
+  target:
+    exclude:
+    - nightly
 
 steps:
 - name: call webhook
