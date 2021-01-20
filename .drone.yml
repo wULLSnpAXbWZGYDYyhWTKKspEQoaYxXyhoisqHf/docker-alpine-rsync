@@ -57,7 +57,7 @@ clone:
 steps:
 - name: discord
   pull: always
-  image: appleboy/drone-discord:1.2.4
+  image: appleboy/drone-discord:1.2.6
   settings:
     message: >
       {{#success build.status}}
@@ -103,7 +103,7 @@ clone:
 steps:
 - name: discord
   pull: always
-  image: appleboy/drone-discord:1.2.4
+  image: appleboy/drone-discord:1.2.6
   settings:
     message: >
       {{#success build.status}}
