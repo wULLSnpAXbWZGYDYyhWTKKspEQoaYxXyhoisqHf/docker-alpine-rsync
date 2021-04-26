@@ -11,6 +11,6 @@ push mirror lives in [this GitHub repo](https://github.com/wULLSnpAXbWZGYDYyhWTK
 development happens on [this Gitea instance](https://git.dotya.ml/wanderer/docker-alpine-rsync)
 
 ## What you get
-* freshly updated [`alpine:3.13.2`](https://hub.docker.com/_/alpine) image
+* freshly updated [`alpine:3.13.5`](https://hub.docker.com/_/alpine) image
 * rsync
 * sshpass
