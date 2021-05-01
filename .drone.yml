@@ -10,7 +10,7 @@ platform:
 steps:
 - name: build
   pull: always
-  image: immawanderer/drone-kaniko:efd19c50
+  image: immawanderer/drone-kaniko:linux-amd64
   settings:
     dockerfile: Dockerfile
     context: .
