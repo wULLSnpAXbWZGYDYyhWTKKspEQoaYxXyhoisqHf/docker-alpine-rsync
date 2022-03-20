@@ -8,7 +8,7 @@ dargskaniko = run --rm -it -w=$(kanikowdir) -v $$PWD:$(kanikowdir)
 kanikoexecutorimg = gcr.io/kaniko-project/executor
 kanikowdir = /src
 kanikocontext = .
-kanikoargs = -f=$(dfile) -c=$(kanikocontext) --use-new-run --snapshotMode=redo --no-push --force
+kanikoargs = -f=$(dfile) -c=$(kanikocontext) --use-new-run --snapshotMode=redo --no-push
 
 .PHONY: build kaniko clean test prune
 
